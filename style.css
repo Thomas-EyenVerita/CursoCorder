@@ -12,20 +12,28 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de transparencia */
+    padding: 10px;
+    position: fixed; /* O sticky si prefieres */
+    width: 100%;
 }
-header h1{
-    color: rgb(204, 195, 195);
+.nombre{
+    color: white;
+    font-size: 28px;
 }
 nav {
     flex-grow: 1;
     display: flex;
     justify-content: center;
+    
+    
 }
 
 nav ul {
     display: flex;
     list-style: none;
     padding: 0;
+    
     margin: 0;
 }
 
@@ -37,10 +45,16 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 23px;
+    display: inline-block;
+    padding-left: 4;
+    padding-top: 2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+
+    
 }
 
 button {
-    padding: 8px 16px;
+    padding: 10px 25px;
     background-color: #007bff;
     color: white;
     border: none;
@@ -51,8 +65,10 @@ button {
 .img-container {
     position: relative;
     width: 100%;
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    height: 85vh; /* Ocupa toda la altura de la pantalla */
     overflow: hidden;
+    background: rgba(0, 0, 0, 0.1); /* Capa oscura sobre la imagen */
+
 }
 
 .img-container img {
@@ -63,4 +79,67 @@ button {
     top: 0;
     left: 0;
     z-index: -1; /* Manda la imagen al fondo */
+}
+
+.overlay{
+    color:white;
+    font-size: 50px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    text-align: center;
+    margin-top: 20%;
+    text-decoration: underline overline;
+    text-decoration-thickness: 5px; /* Grosor de la línea */
+    text-underline-offset: 18px; /* Ajusta la posición del underline */
+
+    
+}
+
+.but-turn{
+    margin-top: 20px;
+    padding: 20px 50px;
+    background-color: #eb890a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+}
+/* ////////////////////////////////////  */
+
+.productos {
+    display: flex; /* Esto coloca los elementos uno al lado del otro */
+    justify-content: space-between; /* Espacio entre ambos elementos */
+    width: 100%;
+    height: 70vh;
+    background-color: rgb(238, 238, 238);
+
+}
+
+.acumula-puntos {
+    flex: 1; /* La primera imagen ocupará el 50% */
+    position: relative;
+    margin-right: 1px; /* Espacio entre las dos secciones */
+}
+
+.acumula-puntos img {
+    width: 95%; /* La imagen ocupará el 100% del ancho de su contenedor */
+    height: 95%; /* Mantener la proporción de la imagen */
+    object-fit: cover;
+    margin-left: 25px;
+    margin-top: 12px;
+}
+
+.img-puntos {
+ 
+    position: relative;
+    margin-left: 20px; /* Espacio entre las dos secciones */
+}
+
+.img-puntos img {
+    width: 95%; /* La imagen ocupará el 100% del ancho de su contenedor */
+    height: 95%; /* Mantener la proporción de la imagen */
+    object-fit: cover;
+    margin-right: 20px ;
+    margin-top: 12px;
+
 }
