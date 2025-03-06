@@ -119,18 +119,36 @@ button {
     flex: 1; /* La primera imagen ocupará el 50% */
     position: relative;
     margin-right: 1px; /* Espacio entre las dos secciones */
+    height: 100%;
+    
+    
 }
 
 .acumula-puntos img {
+    background: rgba(0, 0, 0, 0.5); /* Capa oscura sobre la imagen */
+
     width: 95%; /* La imagen ocupará el 100% del ancho de su contenedor */
     height: 95%; /* Mantener la proporción de la imagen */
     object-fit: cover;
     margin-left: 25px;
     margin-top: 12px;
 }
+.acumula-puntos::before {
+    content: ""; /* Necesario para crear el pseudo-elemento */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 95%;
+    background: rgba(0, 0, 0, 0.7); /* Fondo negro con 50% de transparencia */
+    z-index: 0; /* Asegura que la capa oscura esté sobre la imagen pero debajo del texto */
+    margin-left: 25px;
+    margin-top: 12px;
+
+
+}
 
 .img-puntos {
- 
     position: relative;
     margin-left: 20px; /* Espacio entre las dos secciones */
 }
@@ -142,4 +160,17 @@ button {
     margin-right: 20px ;
     margin-top: 12px;
 
+}
+
+
+.text{
+    position: absolute; /* Posicionamos el texto sobre la imagen */
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste preciso para centrar */
+    color: white; /* Color del texto */
+    font-size: 24px; /* Tamaño del texto */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1); /* Sombra del texto para mayor contraste */
+    text-align: center;
+    width: 90%; /* Opcional, para ajustar el tamaño del texto */
 }
