@@ -3,22 +3,64 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-header{
-    padding-left: 6px;
-    padding-top: 10px;
-    align-items: center;
-    flex: auto;
-    width: 100%;
-    position: fixed;
+header {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+header h1{
+    color: rgb(204, 195, 195);
+}
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
     display: flex;
-    justify-content: center;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
+nav ul li {
+    margin: 0 25px;
+}
 
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.img-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    overflow: hidden;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra toda la sección */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Manda la imagen al fondo */
+}
